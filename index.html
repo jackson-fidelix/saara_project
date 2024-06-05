@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title> SAARA - Inicial </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/dadd998619.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+
+<style>
+
+   #myDIV {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #DC143C;
+  animation: mymove 9s infinite;
+}
+
+@keyframes mymove {
+  50% {background-color:  #4169E1;}
+}
+
+  #img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+
+  #jjj {
+  font-size: 19px;  
+}
+
+   h1{
+    text-align: center;
+    font-size: 15px;
+  }
+
+  #a {
+    font-size: 26px;  
+    font-family: "Audiowide", sans-serif;
+  }
+
+  #b {
+    font-size: 14px;
+    font-family: "Audiowide", sans-serif;
+    }
+
+  #c {
+  font-size: 24px;
+  font-family: Copperplate, Papyrus, fantasy;
+  }
+
+   #d {
+    font-size: 23px;
+    font-family: Copperplate, Papyrus, fantasy;
+    color: white;
+    text-align: justify;
+  }
+
+  #e {
+    font-size: 60px;
+    font-family: 'Brush Script MT', cursive;
+    color: white;  
+  }
+
+</style>
+</head>
+
+
+<body>
+
+  
+   <div class="w3-top" id="myDIV">
+    <a href="{% url 'website:index' %}" class="w3-bar-item w3-button" id="a"> <b> <font color="black" id="jjj"> SAARA </font> </b>
+
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <br>
+    <a href="{% url 'website:cadastra_funcionario' %}" class="w3-bar-item w3-button" class="w3-bar-item w3-button"> 
+    <i><font color="white" id="b"><i class="fas fa-folder-plus" style=font-size:23px; color:white;> </i> <b> &nbsp; Cadastrar </b></font></i></a>
+    <a href="{% url 'website:lista_funcionarios' %}" class="w3-bar-item w3-button" class="w3-bar-item w3-button">  
+    <i><font color="white" id="b"><i class="fas fa-list" style=font-size:23px; color:white;> </i> <b> &nbsp; Listar </b></font></i></a>
+    <a href="#sobre" class="w3-bar-item w3-button" class="w3-bar-item w3-button">
+    <i><font color="white" id="b"><i class="far fa-address-card" style=font-size:23px;color:white;> </i><b> &nbsp; Sobre </b></font></i></a>
+    <a href="#" class="w3-bar-item w3-button" class="w3-bar-item w3-button">
+    <i><font color="white" id="b"><i class="fas fa-sign-out-alt" style=font-size:23px;color:white;> </i><b></b></font></i></a>
+
+    </div>
+  </div>                      
+  
+    <br><br>
+
+      <header class="w3-display-container w3-content w3-wide" style="max-width:100%;" id="home">
+  <img class="w3-image" img src="img/alunos_index.jpg" id="img">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-blue w3-opacity-min"><b>SAARA</b></span>
+    <span class="w3-padding w3-red w3-opacity-min"> Univesp 2021</span></h1>
+    </div>
+</header>
+
+    
+
+  <!-- Project Section --> 
+    <header class="w3-display-container " style="max-width:100%;">
+          <img class="" img src="img/sobre_univesp.png" id="img">
+          <img class="" img src="img/final_index.png" id="img">
+      <h1 class="w3-xlarge w3-text-white">
+
+        <div class="w3-display-middle w3-center">
+    <span class="w3-padding w3-purple" id="e"><b><a  name="sobre"> SOBRE </a></b></span><br><br>           
+    <span class="w3-padding w3-grey" id="c"><b>SAARA - Sistema Auxiliar de Alunos Regulares e Autistas</b></span><br> 
+            
+            <span id="d">  Somos os estudantes Jackson, Mauricio e Ildevania do Eixo de Computação da UNIVESP (Universidade Virtual do Estado de São Paulo), cuja extensão pertence ao polo de Artur Nogueira. Decidimos fazer este site como nosso Projeto Integrador com o intuito de colaborar e facilitar o trabalho de profissionais que necessitam de um trabalho no ramo educacional de maneira integrada. </span><br>
+
+            <span id="d"> Em nossa comunidade há dificuldades em atualizar o plano educacional individualizado e compartilhá-lo para equipe multidisciplinar, família e profissionais que fazem acompanhamento de portadores de necessidades especiais.</span><br>
+
+            <span id="d"> Entramos em contato com a comunidade externa para entendermos melhor qual é a "dor" enfrentada e de qual modo poderíamos ajudá-los.</span><br>
+
+            <span id="d">Ficou evidenciado a dificuldade no preenchimento de fichas de crise pré e pós bem como o diário de bordo que é feito em cadernos e depois passado para computador quando as salas de professores auxiliares e acompanhante terapêuticas tenham disponibilidade e isso atrasa um pouco as informações, bem como os procedimentos de manejos e intervenções.</span><br>
+
+            <span id="d"> Com o objetivo de desenvolver um software que facilite a articulação das demandas e trazer em tempo real as informações necessárias para fazer as providência e aleterações necessários, criamos esse site. Esperamos que você possa usufruir dessa importante ferramenta e trazer consigo praticidade. Ótimo trabalho, Deus abençoe você e sua familia. </span><br>
+            
+            <span id="d"> MÃOS&nbsp; À&nbsp; OBRA !!! </span>
+
+        </div>
+    </header>
+
+  </body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>SAARA - Lista</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/dadd998619.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+    body {
+  width: auto;   
+  height: 2900px;
+  background-color: #cccccc;
+  background-image: linear-gradient(white , #A9A9A9 70%, #696969 100%);
+}
+
+   #myDIV {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #DC143C;
+  animation: mymove 9s infinite;
+}
+
+@keyframes mymove {
+  50% {background-color:  #4169E1;}
+}
+
+  #img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+
+  #jjj {
+  font-size: 19px;  
+}
+
+     h1{
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 800px;
+  }
+
+   h2{
+    text-align: center;
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px; 
+    font-family: "Times New Roman", Times, serif;
+}
+
+  #a {
+    font-size: 26px;  
+    font-family: "Audiowide", sans-serif;
+  }
+
+  #b {
+    font-size: 14px;
+    font-family: "Audiowide", sans-serif;
+    }
+
+  
+
+  .border {
+    border: double black;
+    width:  auto;
+    height: auto;
+    margin-left: 20px;
+    background-image: linear-gradient(white, #E0FFFF);
+    float: left;
+  }
+    
+  .border2 {
+    border: double black;
+    width:  620px;
+    height: 2680px;
+    margin-right: 35px;
+    background-image: linear-gradient(white , #A9A9A9 70%, #98FB98 100%);
+    float: right;
+  } 
+
+  .btn1 {
+    background-color: #4169E1;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 15px;
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto auto;
+    cursor: pointer;
+    
+  }
+
+  .btn2 {
+    background-color: #8B0000;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 15px;
+    align-content: center;
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto auto;
+    cursor: pointer;
+    
+  }
+
+
+    </style>
+</head>
+
+
+<body>
+
+   <div class="w3-top" id="myDIV">
+    <a href="{% url 'website:index' %}" class="w3-bar-item w3-button" id="a"> <b> <font color="white" id="jjj"> SAARA </font> </b>
+
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <br>
+    <a href="{% url 'website:cadastra_funcionario' %}" class="w3-bar-item w3-button"> 
+    <i><font color="white" id="b" ><i class="fas fa-folder-plus" style=font-size:23px; color:white; > </i> <b> &nbsp; Cadastrar </b></font></i></a>
+        <a href="{% url 'website:lista_funcionarios' %}" class="w3-bar-item w3-button" >  
+    <i><font color="black" id="b"><i class="fas fa-list" style=font-size:23px; color:white;> </i> <b> &nbsp; Listar </b></font></i></a>
+    <a href="#sobre" class="w3-bar-item w3-button" class="w3-bar-item w3-button">
+           <i><font color="white" id="b"><i class="far fa-address-card" style=font-size:23px;color:white;> </i><b> &nbsp; Sobre </b></font></i></a>
+    <a href="#" class="w3-bar-item w3-button" class="w3-bar-item w3-button">
+    <i><font color="white" id="b"><i class="fas fa-sign-out-alt" style=font-size:23px;color:white;> </i><b></b></font></i></a>
+
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+  <div class="w3-display-top">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-blue w3-opacity-min"><b> Lista de Relatórios </b></span></h1><br></div>
+
+
+    <div class="border">
+        <table style="border: 1px solid #BBB; width: 100%;">
+            <thead>
+                <tr style="border-bottom: 1px solid #AAA">
+                    <td><b>Nome</b></td>
+                    <td><b>Série</b></td>
+                    <td><b>Turno</b></td>
+                    <td><b>Idade</b></td>
+                    <td><b>Responsavel</b></td>
+                    <td><b>Observação</b></td>
+                    <td><b>Alterar</b></td>&nbsp;
+                    <td><b>Remover</b></td>
+
+                    <form>
+                     
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for funcionario in funcionarios %}
+                    <tr>
+                        <td>{{ funcionario.nome }}</td>
+                        <td>{{ funcionario.serie }}</td>
+                        <td>{{ funcionario.turno }}</td>
+                        <td>{{ funcionario.idade }}</td>
+                        <td>{{ funcionario.responsavel }}</td>
+                        <td>{{ funcionario.observacao }}</td>
+                        <td>&nbsp;<a href="{% url 'website:atualiza_funcionario' pk=funcionario.id %}"class="btn1"><i class="fas fa-tools"></i></a></td>
+                        <td>&nbsp;&nbsp;&nbsp;<a href="{% url 'website:deleta_funcionario' pk=funcionario.id %}" class="btn2"><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    
+</body>
+</html>

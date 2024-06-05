@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title> SAARA - Cadastro </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/dadd998619.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+
+<style>
+
+    body {
+  width: auto;   
+  height: 2900px;
+  background-color: #cccccc;
+  background-image: linear-gradient(black , grey 70%, white 100%);
+}
+
+   #myDIV {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #DC143C;
+  animation: mymove 9s infinite;
+}
+
+@keyframes mymove {
+  50% {background-color:  #4169E1;}
+}
+
+  #img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+
+  #jjj {
+  font-size: 19px;  
+}
+
+     h1{
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 800px;
+  }
+
+   h2{
+    text-align: center;
+    font-size: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px; 
+    font-family: "Times New Roman", Times, serif;
+}
+
+  #a {
+    font-size: 26px;  
+    font-family: "Audiowide", sans-serif;
+  }
+
+  #b {
+    font-size: 14px;
+    font-family: "Audiowide", sans-serif;
+    }
+
+  
+
+  .border {
+    border: double black;
+    width:  620px;
+    height: 1750px;
+    margin-left: 35px;
+    background-image: linear-gradient(white , #E0FFFF 70%, #90EE90 100%);
+    float: left;
+  }
+    
+  .border2 {
+    border: double black;
+    width:  620px;
+    height: 2680px;
+    margin-right: 35px;
+    background-image: linear-gradient(white , #F0F8FF 70%, #98FB98 100%);
+    float: right;
+  } 
+
+  button {
+    background-color: #006400;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 250px;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+
+
+<body>
+
+  
+   <div class="w3-top" id="myDIV">
+    <a href="{% url 'website:index' %}" class="w3-bar-item w3-button" id="a"> <b> <font color="white" id="jjj"> SAARA </font> </b>
+
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <br>
+    <a href="{% url 'website:cadastra_funcionario' %}" class="w3-bar-item w3-button"> 
+    <i><font color="black" id="b" ><i class="fas fa-folder-plus" style=font-size:23px; color:white; > </i> <b> &nbsp; Cadastrar </b></font></i></a>
+        <a href="{% url 'website:lista_funcionarios' %}" class="w3-bar-item w3-button" >  
+    <i><font color="white" id="b"><i class="fas fa-list" style=font-size:23px; color:white;> </i> <b> &nbsp; Listar </b></font></i></a>
+    <a href="#sobre" class="w3-bar-item w3-button" class="w3-bar-item w3-button">
+           <i><font color="white" id="b"><i class="far fa-address-card" style=font-size:23px;color:white;> </i><b> &nbsp; Sobre </b></font></i></a>
+    <a href="#" class="w3-bar-item w3-button" class="w3-bar-item w3-button">
+    <i><font color="white" id="b"><i class="fas fa-sign-out-alt" style=font-size:23px;color:white;> </i><b></b></font></i></a>
+
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+  <div class="w3-display-top">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-green w3-opacity-min"><b> Cadastro de Relatórios </b></span></h1>
+
+  <br>
+
+        <div class="border">
+        
+        <h2> <b> FORMULÁRIO PARA REGISTRO DE RESMUNGO PRÉ-CRISE </b> </h2> <br><br>
+
+        <form action="/action_page.php">
+  <label for="nome">&nbsp; Nome:</label>&nbsp;
+  <input type="text" id="nome" name="nome">
+  <label for="sobrenome">&nbsp; Sobrenome:</label>&nbsp;
+  <input type="text" id="sobrenome" name="sobrenome"><br><br>
+  <label for="serie">&nbsp; Série:</label>&nbsp;
+  <input type="text" id="serie" name="serie">
+  <form>
+    <label for="turno">&nbsp; Turno:</label>
+  <input type="radio" id="html" name="fav_language" >
+  <label for="manha">Manhã</label>
+  <input type="radio" id="css" name="fav_language">
+  <label for="tarde">Tarde</label>
+  <input type="radio" id="javascript" name="fav_language">
+  <label for="noite">Noite</label><br><br>
+</form>
+    <label for="idade">&nbsp; Idade:</label>&nbsp;
+  <input type="text" id="idade" name="idade">
+  <label for="nomeprof"> Profissional:</label>&nbsp;
+  <input type="text" id="nomeprof" name="nomeprof"><br><br>
+  <label for="data">&nbsp; Data:</label>
+  <input type="date" id="data" name="data"> 
+</form> 
+   <p> <b> 1- Quais fatores desencadearam o comportamento de resmungo? </b></p>
+    <input type="checkbox" id="1.1" name="fav_language" >
+  <label for="1.1">mudança não planejada</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.2" name="fav_language">
+  <label for="1.2">agrupamento de pessoas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.3" name="fav_language">
+  <label for="1.3">conflito com o profissional/professor</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.4" name="fav_language" >
+  <label for="1.4">atividade não cumprida</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.5" name="fav_language">
+  <label for="1.5">ruídos</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.6" name="fav_language">
+  <label for="1.6">conflito com os colegas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.7" name="fav_language" >
+  <label for="1.7">mudança não planejada</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.8" name="fav_language">
+  <label for="1.8">atividade proposta</label><br>
+  <input type="checkbox" id="1.9" name="fav_language">
+  <label for="1.9">odores</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.10" name="fav_language" >
+  <label for="1.10">iluminação</label>&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="1.11" name="fav_language">
+  <label for="1.11">contrariedade</label>&nbsp;&nbsp;
+  <input type="checkbox" id="1.12" name="fav_language">
+  <label for="1.12">Outros</label><br>
+  <label for="1.13"></label>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br>
+
+  <p> <b> 2- Quais comportamentos a pessoa teve no estágio de resmungo? </b></p>
+  <input type="checkbox" id="2.1" name="fav_language" >
+  <label for="2.1">Roeu as unhas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.2" name="fav_language">
+  <label for="2.2">aumentou as estereotipias</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.3" name="fav_language">
+  <label for="2.3">olhou fixamente</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="2.4" name="fav_language" >
+  <label for="2.4">elevou o tom de voz</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.5" name="fav_language">
+  <label for="2.5">insultou as pessoas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.6" name="fav_language">
+  <label for="2.6">enrijeceu a musculatura</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.7" name="fav_language" >
+  <label for="2.7"> intensificou a ecolalia</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.8" name="fav_language">
+  <label for="2.8">arregalou os olhos</label><br>
+  <input type="checkbox" id="2.9" name="fav_language">
+  <label for="2.9">manipulou irritadamente objetos</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.10" name="fav_language" >
+  <label for="2.10">ficou mais opositivo</label>&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="2.11" name="fav_language">
+  <label for="2.11">levantou as sobrancelhas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.12" name="fav_language">
+  <label for="2.12">elevou a palilalia</label><br>
+  <label for="2.13"></label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.14" name="fav_language" >
+  <label for="2.14">reduziu o contato visual</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.15" name="fav_language">
+  <label for="2.15">outros</label><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br>
+
+  <p> <b> 3- Mencionou ou sinalizou algum mal estar ou dor?</b></p>
+  <input type="checkbox" id="3.1" name="fav_language" >
+  <label for="3.1">estômago</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.2" name="fav_language">
+  <label for="3.2">tontura</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.3" name="fav_language">
+  <label for="3.3">cabeça</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="3.4" name="fav_language" >
+  <label for="3.4">enjôo</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.5" name="fav_language">
+  <label for="3.5">garganta</label><br>
+  <input type="checkbox" id="3.6" name="fav_language">
+  <label for="3.6">ouvido</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.7" name="fav_language" >
+  <label for="3.7">dente</label><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br>
+
+  <p> <b> 4- Qual a atitude tomada para minimizar ou sanar a queixa? </b></p>
+  &nbsp;&nbsp;<input type="checkbox" id="4.1" name="fav_language" >
+  <label for="4.1">Usou medicação - Qual?</label>
+  <input type="text" id="medicação" name="medicação"><br><br>
+  &nbsp;&nbsp;<input type="checkbox" id="4.2" name="fav_language" >
+  <label for="4.2">Usou placebo - Qual?</label>
+  <input type="text" id="placebo" name="placebo"><br><br>
+  <input type="checkbox" id="4.3" name="fav_language" >
+  <label for="4.3">Providenciou descanso/relaxamento</label> &nbsp;&nbsp;
+  <input type="checkbox" id="4.4" name="fav_language" >
+  <label for="4.4">Fez massagem</label>&nbsp;&nbsp; 
+  <input type="checkbox" id="4.5" name="fav_language" >
+  <label for="4.5">Toque suave</label>&nbsp;&nbsp;
+  <input type="checkbox" id="4.6" name="fav_language" >
+  &nbsp;&nbsp;<label for="4.6">Toque médio</label>&nbsp;&nbsp;
+  <input type="checkbox" id="4.7" name="fav_language" >
+  <label for="4.7">Toque intenso</label><br><br>
+  &nbsp;&nbsp;<input type="checkbox" id="4.8" name="fav_language" >
+  <label for="4.8">Redirecionou - Especifique</label>
+  <input type="text" id="medicação" name="medicação"><br><br>
+   &nbsp;&nbsp;<input type="checkbox" id="4.9" name="fav_language" >
+  <label for="4.9">Outros - Descreva:</label>
+  <input type="text" id="medicação" name="medicação"><br>
+
+  <p> <b>5- Após o resmungo...</b></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" id="5.1" name="fav_language" >
+  <label for="5.1">Foi para o estágio de raiva</label>&nbsp;&nbsp;
+  &nbsp;&nbsp;<input type="radio" id="5.2" name="fav_language">
+  <label for="5.2">Recuperou-se</label>&nbsp;&nbsp;<br>
+
+  <p> <b>6- Qual a duração do estágio de resmungo antes de entrar em outro estágio?</b></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br><br>
+  <button type="button" onclick="alert('!!! CADASTRO REALIZADO COM SUCESSO !!!')">Finalizar!</button>
+    </form>
+</div>
+
+<!-- ******* SEGUNDO FORMULÁRIO ******* -->
+
+<div class="border2">
+        
+        <h2> <b> FORMULÁRIO PARA REGISTRO DE CRISE </b> </h2> <br><br>
+
+        <form action="/action_page.php">
+  <label for="nome">&nbsp; Nome:</label>&nbsp;
+  <input type="text" id="nome" name="nome">
+  <label for="sobrenome">&nbsp; Sobrenome:</label>&nbsp;
+  <input type="text" id="sobrenome" name="sobrenome"><br><br>
+  <label for="serie">&nbsp; Série:</label>&nbsp;
+  <input type="text" id="serie" name="serie">
+  <form>
+    <label for="turno">&nbsp; Turno:</label>
+  <input type="radio" id="html" name="fav_language" >
+  <label for="manha">Manhã</label>
+  <input type="radio" id="css" name="fav_language">
+  <label for="tarde">Tarde</label>
+  <input type="radio" id="javascript" name="fav_language">
+  <label for="noite">Noite</label><br><br>
+</form>
+    <label for="idade">&nbsp; Idade:</label>&nbsp;
+  <input type="text" id="idade" name="idade">
+  <label for="nomeprof"> Profissional:</label>&nbsp;
+  <input type="text" id="nomeprof" name="nomeprof"><br><br>
+  <label for="data">&nbsp; Data:</label>
+  <input type="date" id="data" name="data"> 
+</form> 
+   <p> <b> 1- Quais comportamentos a pessoa apresentou no estágio de crise? </b></p>
+    &nbsp;
+    <input type="checkbox" id="6.1" name="fav_language" >
+  <label for="6.1">Agrediu verbalmente o profissional</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.2" name="fav_language">
+  <label for="6.2">Agressão verbal aleatória</label><br>
+  <input type="checkbox" id="6.3" name="fav_language">
+  <label for="6.3">Ameaçou agredir fisicamente os colegas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.4" name="fav_language" >
+  <label for="6.4">Agrediu verbalmente os colegas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.5" name="fav_language">
+  <label for="6.5">Ameaçou agredir fisicamente o profissional</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.6" name="fav_language">
+  <label for="6.6">Ameaçou agredir fisicamente outras pessoas</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.7" name="fav_language" >
+  <label for="6.7"> Autoagrediu-se</label><br>
+  <input type="checkbox" id="6.8" name="fav_language">
+  <label for="6.8">Danificou materiais/equipamentos? Quais?</label>
+  <input type="text" id="equipamentos" name="equipamentos"><br>
+  <input type="checkbox" id="6.9" name="fav_language">
+  <label for="6.9">Agrediu fisicamente o profissional</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.10" name="fav_language" >
+  <label for="6.10">Agrediu fisicamente os colegas?Se sim, descreva o tipo de agressão:</label>
+  <input type="text" id="agressão" name="agressão"><br>
+  <input type="checkbox" id="6.11" name="fav_language">
+  <label for="6.11"> Ficou alheio</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.11" name="fav_language">
+  <label for="6.11">isolou-se</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.11" name="fav_language">
+  <label for="6.11">tentou deixar o local</label>&nbsp;&nbsp;
+  <input type="checkbox" id="6.12" name="fav_language">
+  <label for="6.12">Outros</label><br><br>
+  <label for="6.13"></label>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br>
+
+  <p> <b> 2- Quais formas de intervenção foram usadas durante a crise? </b></p>
+  <input type="checkbox" id="7.1" name="fav_language" >
+  <label for="2.1">Levou a pessoa para outro local - time out  - área externa à crise (ex. área de lazer, pátio, refeitório) - Especifique</label>&nbsp;&nbsp;
+  <input type="text" id="intervenção" name="intervenção"><br>
+  <input type="checkbox" id="2.2" name="fav_language">
+  <label for="2.2">Ficou asós com a pessoa na sala</label>&nbsp;&nbsp;
+  <input type="checkbox" id="2.3" name="fav_language">
+  <label for="2.3">Ficou a sós com a pessoa na companhia de outros profissionais. Quais?</label>
+  <input type="text" id="intervenção" name="intervenção"><br>
+  <input type="checkbox" id="2.4" name="fav_language" >
+  <label for="2.4">Ficou a sós com a pessoa na companhia de outros colegas.<br> Quais?</label>&nbsp;&nbsp;
+  <input type="text" id="intervenção" name="intervenção"><br>
+   <p>Descreva as ações realizadas pelo profissional durante a crise. (ex. cantaram, ouviram música, dançaram, pularam, foi medicado etc.)</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50"> </textarea><br>
+  <p>Descreva as ações realizadas pelas outras pessoas presentes</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50"></textarea><br>
+
+  <p> <b> 3- Mencionou ou sinalizou algum mal estar ou dor?</b></p>
+  <input type="checkbox" id="3.1" name="fav_language" >
+  <label for="3.1">estômago</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.2" name="fav_language">
+  <label for="3.2">tontura</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.3" name="fav_language">
+  <label for="3.3">cabeça</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="3.4" name="fav_language" >
+  <label for="3.4">enjôo</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.5" name="fav_language">
+  <label for="3.5">garganta</label><br>
+  <input type="checkbox" id="3.6" name="fav_language">
+  <label for="3.6">ouvido</label>&nbsp;&nbsp;
+  <input type="checkbox" id="3.7" name="fav_language" >
+  <label for="3.7">dente</label><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br>
+
+  <p> <b> 4- Qual a atitude tomada para minimizar ou sanar a queixa? </b></p>
+  &nbsp;&nbsp;<input type="checkbox" id="4.1" name="fav_language" >
+  <label for="4.1">Usou medicação - Qual?</label>
+  <input type="text" id="medicação" name="medicação"><br><br>
+  &nbsp;&nbsp;<input type="checkbox" id="4.2" name="fav_language" >
+  <label for="4.2">Usou placebo - Qual?</label>
+  <input type="text" id="placebo" name="placebo"><br><br>
+  <input type="checkbox" id="4.3" name="fav_language" >
+  <label for="4.3">Providenciou descanso/relaxamento</label> &nbsp;&nbsp;
+  <input type="checkbox" id="4.4" name="fav_language" >
+  <label for="4.4">Fez massagem</label>&nbsp;&nbsp; 
+  <input type="checkbox" id="4.5" name="fav_language" >
+  <label for="4.5">Toque suave</label>&nbsp;&nbsp;
+  <input type="checkbox" id="4.6" name="fav_language" >
+  &nbsp;&nbsp;<label for="4.6">Toque médio</label>&nbsp;&nbsp;
+  <input type="checkbox" id="4.7" name="fav_language" >
+  <label for="4.7">Toque intenso</label><br><br>
+  &nbsp;&nbsp;<input type="checkbox" id="4.8" name="fav_language" >
+  <label for="4.8">Redirecionou - Especifique</label>
+  <input type="text" id="medicação" name="medicação"><br><br>
+   &nbsp;&nbsp;<input type="checkbox" id="4.9" name="fav_language" >
+  <label for="4.9">Outros - Descreva:</label>
+  <input type="text" id="medicação" name="medicação"><br>
+
+  <p> <b>5- Após o resmungo...</b></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;<input type="radio" id="5.1" name="fav_language" >
+  <label for="5.1">Foi para o estágio de raiva</label>&nbsp;&nbsp;
+  &nbsp;&nbsp;<input type="radio" id="5.2" name="fav_language">
+  <label for="5.2">Recuperou-se</label>&nbsp;&nbsp;<br>
+
+  <p> <b>6- Qual a duração do estágio de resmungo antes de entrar em outro estágio?</b></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br>
+
+  <p> <b>7- Foi necessário o uso de medicação ?</b></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" id="7.1" name="fav_language" >
+  <label for="7.1"> Sim </label>&nbsp;&nbsp;
+  <input type="radio" id="7.2" name="fav_language" >
+  <label for="7.2"> Não </label>&nbsp;&nbsp;<br><br>
+   &nbsp;&nbsp;
+  <label for="7.3">Se sim, quem administrou a medicação?</label>
+  <input type="text" id="7.3" name="7.3"><br><br>
+  &nbsp;&nbsp;
+  <label for="7.4">Qual a medicação administrada?</label>
+  <input type="text" id="7.4" name="7.4"><br><br>
+
+  <p> <b>8- Quais pessoas e instituições foram  avisadas do incidente?</b></p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <textarea rows="4" cols="50" maxlength="50">
+  Descreva aqui suas observações ...</textarea><br><br>
+
+  <p> <b>9-  Qual meio de comunicação utilizou para comunicar o incidente?</b></p>
+
+  <form>
+
+  <input type="radio" id="9.1" name="fav_language" >
+  <label for="9.1">Pessoalmente</label>&nbsp;&nbsp;
+  <input type="radio" id="9.2" name="fav_language" >
+  <label for="9.2">Telefone</label>&nbsp;&nbsp;
+  <input type="radio" id="9.3" name="fav_language" >
+  <label for="9.3">Mensagem</label>&nbsp;&nbsp;
+  <input type="radio" id="9.4" name="fav_language" >
+  <label for="9.4">Whatsapp</label>&nbsp;&nbsp;
+  <input type="radio" id="9.5" name="fav_language" >
+  <label for="9.5">E-mail</label>&nbsp;&nbsp;<br>&nbsp;
+ <input type="radio" id="9.6" name="fav_language" >
+  <label for="9.6">Comunicado simples</label>&nbsp;&nbsp;
+    <input type="radio" id="9.7" name="fav_language" >
+  <label for="9.7">Relatório</label>&nbsp;&nbsp;
+
+  </form><br>
+
+
+  <button type="button" onclick="alert('!!! CADASTRO REALIZADO COM SUCESSO !!!')">Finalizar!</button>
+
+    </form>
+</div>
+
+
+</body>
+</html>

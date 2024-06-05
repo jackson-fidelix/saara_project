@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	 <title> SAARA </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/dadd998619.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+	
+  #myDIV {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: #DC143C;
+  animation: mymove 9s infinite;
+}
+
+@keyframes mymove {
+  50% {background-color:  #4169E1;}
+}
+
+  #img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+
+  #jjj {
+  font-size: 19px;  
+}
+
+   h1{
+    text-align: center;
+    font-size: 15px;
+  }
+
+  #a {
+    font-size: 26px;  
+    font-family: "Audiowide", sans-serif;
+  }
+
+  #b {
+    font-size: 14px;
+    font-family: "Audiowide", sans-serif;
+    }
+
+  #c {
+  font-size: 24px;
+  font-family: Copperplate, Papyrus, fantasy;
+  }
+
+   #d {
+    font-size: 23px;
+    font-family: Copperplate, Papyrus, fantasy;
+    color: white;
+    text-align: justify;
+  }
+
+  #e {
+    font-size: 60px;
+    font-family: 'Brush Script MT', cursive;
+    color: Crimson;  
+  }
+
+  body {
+  background-image: url('img/login.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+
+}
+
+
+    </style>
+</head>
+
+<body >
+<br><br><br><br><br><br>
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:100%;" id="home">
+<div class="w3-display-middle w3-center">
+<h3 align="center " classe="w3-padding w3-purple" id="e">  Faça seu Login !  </h3><br>
+</div>
+</header>
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>Entrar</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+			  <label data-error="wrong" data-success="right" for="modalLRInput10">CPF</label>
+                <i class="fas fa-envelope prefix"></i>
+                <input type="text" id="modalLRInput10" class="form-control">               
+              </div>
+
+              <div class="md-form form-sm mb-4">
+			  <label data-error="wrong" data-success="right" for="modalLRInput11">Senha</label>
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">           
+              </div><br>
+			  
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Entrar<i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+            </div><br>
+          </div> 
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Entrar</a>
+</div><br><br>
+
+
+<div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Caso ainda não tenha um cadastro, faça-o agora mesmo!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+<div class="modal-body">
+<div class="md-form form-sm mb-5">
+<label data-error="wrong" data-success="right" for="modalLRInput12">Nome</label>
+<i class="fas fa-envelope prefix"></i>
+<input type="text" id="modalLRInput12" class="form-control">
+</div>
+
+<div class="modal-body">
+<div class="md-form form-sm mb-5">
+<label data-error="wrong" data-success="right" for="modalLRInput12">CPF</label>
+<i class="fas fa-envelope prefix"></i>
+<input type="text" id="modalLRInput12" class="form-control">
+</div><br>
+
+	<span class="w3-padding w3-purple w3-black" ><b> Área </b> <i class="fas fa-check-square"></i> </span><br>
+
+<form>
+
+  <input type="radio" id="familia" name="fav_language" >
+  <label for="familia">Familia</label>&nbsp;&nbsp;
+  <input type="radio" id="pedagogo" name="fav_language" >
+  <label for="pedagogo">Pedagogo</label>&nbsp;&nbsp;
+  <input type="radio" id="terapeuta" name="fav_language" >
+  <label for="terapeuta">Terapeuta</label>&nbsp;&nbsp;
+  <input type="radio" id="psicologo" name="fav_language" >
+  <label for="psicologo">Psicólogo</label>&nbsp;&nbsp;
+  <input type="radio" id="psiquiatra" name="fav_language" >
+  <label for="psiquiatra">Psiquiatra</label>&nbsp;&nbsp;<br>
+ <input type="radio" id="psicopedagogo" name="fav_language" >
+  <label for="Psicopedagogo">Psicopedagogo</label>&nbsp;&nbsp;
+    <input type="radio" id="neuropsicopedagogo" name="fav_language" >
+  <label for="neuropsicopedagogo">Nêuro-psicopedagogo</label>&nbsp;&nbsp;
+    <input type="radio" id="pediatra" name="fav_language" >
+  <label for="pediatra">Pediatra</label>&nbsp;&nbsp;
+  </form>
+
+<div class="modal-body">
+<div class="md-form form-sm mb-5">
+<label data-error="wrong" data-success="right" for="modalLRInput12">E-mail</label>
+<i class="fas fa-envelope prefix"></i>
+<input type="text" id="modalLRInput12" class="form-control">
+</div><br>
+
+<div class="md-form form-sm mb-5">
+<i class="fas fa-lock prefix"></i>
+<label data-error="wrong" data-success="right" for="modalLRInput13">Senha</label>
+<input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+</div><br>
+
+<div class="md-form form-sm mb-4">
+<i class="fas fa-lock prefix"></i>
+<label data-error="wrong" data-success="right" for="modalLRInput14">Confirme a Senha</label>
+<input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+</div><br>
+ 
+<div class="text-center form-sm mt-2">
+      <button class="btn btn-info">Cadastrar<i class="fas fa-sign-in ml-1"></i></button>
+        </div>
+
+</div>
+     <!--Footer-->
+<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+</div>
+</div>
+ 
+ </div>
+ </div>
+</div>
+
+<div class="text-center">
+ <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalSubscriptionForm">Cadastrar</a>
+</div><br><br>
+
+	<div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Área do Administrador</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form3" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form3">CPF</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="password" id="form2" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form2">Senha</label>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-outline-warning waves-effect">Entrar<i class="fas fa-paper-plane-o ml-1"></i></a>
+      </div>
+    </div>
+    <!--/.Content-->
+ 	</div>
+</div>
+	
+		  
+		  
+</body>
+</html>

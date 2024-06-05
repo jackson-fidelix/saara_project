@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>SAARA</title>
+</head>
+
+    <style>
+
+    .btn1 {
+    background-color: #4169E1;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 15px;
+     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto auto;
+    cursor: pointer; 
+  }
+
+  .btn2 {
+    background-color: #8B0000;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 15px;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto auto;
+    cursor: pointer;
+      }
+
+      .border {
+    border: double black;
+    width:  auto;
+    height: auto;
+    margin-left: 350px;
+    background-image: linear-gradient(white, #E0FFFF);
+    float: left;
+    }
+
+    
+
+  </style>
+<body>
+        <h1><font color="red">Página de Exclusão de Relatório</font>
+
+</h1>
+
+    <ul>
+        <li><a href="{% url 'website:index' %}">Página Inicial</a></li>
+        <li><a href="{% url 'website:cadastra_funcionario' %}">Cadastrar Relatório</a></li>
+        <li><a href="{% url 'website:lista_funcionarios' %}">Lista de Relatório</a></li>
+    </ul>
+
+    <div class="border">
+
+    <form method="post" style="border: 1px solid #AAA; margin: 60px auto; padding: 20px; width: 50%;">
+        <!-- É necessário colocar o código abaixo em toda página que                   -->
+        <!-- contenha um formulário para evitar o ataque de Cross Site Request Forgery -->
+      
+
+        <h1> Você tem certeza que quer excluir o funcionário?</h1>
+
+        <button type="button" class="btn1"> Cancelar</a>
+        </button>
+        <button type="button" class="btn2">Excluir</button>
+    </form>
+</div>
+</body>
+</html>
